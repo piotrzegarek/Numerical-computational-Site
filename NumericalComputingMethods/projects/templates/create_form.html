@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% load static %}
+    <h1>twożenie projektó</h1>
+
+    <form class='starting-form' action="" method="POST" enctype=multipart/form-data>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class='btn btn-dark form-button' type="submit">
+    </form>
+    
+{% endblock content %}

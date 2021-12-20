@@ -81,10 +81,21 @@ class Data:
             
         return functions_fields
 
-data = Data('test1.xlsx', 'Pierwszy projekt')
-print(data.use_left_rectangles_method())
-print(data.use_right_rectangles_method())
-print(data.use_triangles_method())
-print(data.use_trapeze_methods())
+
+def createResults(xlsx_file, project_name):
+    data = Data(xlsx_file, project_name)
+
+    results_dict = {
+        'left_rectangles': data.use_left_rectangles_method(),
+        'right_rectangles': data.use_right_rectangles_method(),
+        'triangles': data.use_triangles_method(),
+        'trapezes': data.use_trapeze_methods()
+    }
+
+    return results_dict
+    
+
+
+
 
 
